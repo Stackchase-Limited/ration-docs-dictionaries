@@ -1,0 +1,55 @@
+# Igbo (ig-NG) -- hunspell affix file
+# Windows LCID 1136.
+# Character inventory from An Crubadan project metadata (CC BY 4.0).
+# Onwu orthography. Tone usually unwritten in running text but written
+# in teaching material, so it must not break tokenisation.
+# The apostrophe is orthographic (n'ime, n'ihi) and is a word character.
+LANG ig_NG
+SET UTF-8
+TRY aeiounbcdfghjklmprstwyzịọụṅñ́̀̄
+
+# Combining tone/dot marks must be word characters or hunspell
+# splits words on them and never sees a whole token.
+WORDCHARS ịọụỊỌỤṅṄñÑ́̀̄'’-
+
+# MAP relates a plain letter to its marked forms. This is what makes
+# an undiacriticised input get the correct suggestion while still
+# being rejected as wrong.
+MAP 12
+MAP i(ị)
+MAP o(ọ)
+MAP u(ụ)
+MAP n(ṅ)(ñ)
+MAP aáà
+MAP eéè
+MAP I(Ị)
+MAP O(Ọ)
+MAP U(Ụ)
+MAP N(Ṅ)(Ñ)
+MAP AÁÀ
+MAP EÉÈ
+
+# ICONV normalises legitimate non-NFC input onto the NFC forms held
+# in the .dic: separately typed dot below, the vertical-line-below
+# publishing convention, and tone typed before the dot.
+ICONV 14
+ICONV ị ị
+ICONV ọ ọ
+ICONV ụ ụ
+ICONV Ị Ị
+ICONV Ọ Ọ
+ICONV Ụ Ụ
+ICONV ṅ ṅ
+ICONV Ṅ Ṅ
+ICONV i̩ ị
+ICONV o̩ ọ
+ICONV u̩ ụ
+ICONV ị́ ị́
+ICONV ọ́ ọ́
+ICONV ụ́ ụ́
+
+# Deliberately NO IGNORE directive: making tone and dot marks
+# ignorable would accept undiacriticised text as correct, which is
+# the exact failure this dictionary exists to prevent.
+
+# No PFX/SFX yet -- add them with a morphologically analysed wordlist.

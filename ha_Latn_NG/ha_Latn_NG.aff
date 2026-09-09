@@ -1,0 +1,42 @@
+# Hausa (ha-Latn-NG) -- hunspell affix file
+# Windows LCID 1128.
+# Character inventory from An Crubadan project metadata (CC BY 4.0).
+# Boko orthography. Hooked b/d/k are distinct consonants, not variants.
+# Nigerian standard writes 'y; U+01B4 accepted for Niger orthography.
+# Q V X are foreign letters. Tone and vowel length are not written.
+LANG ha_Latn_NG
+SET UTF-8
+TRY aeiounbcdfghjklmrstwyzɓɗƙʼ'
+
+# Combining tone/dot marks must be word characters or hunspell
+# splits words on them and never sees a whole token.
+WORDCHARS ɓɗƙƁƊƘƴƳʼ'’-
+
+# MAP relates a plain letter to its marked forms. This is what makes
+# an undiacriticised input get the correct suggestion while still
+# being rejected as wrong.
+MAP 8
+MAP b(ɓ)
+MAP d(ɗ)
+MAP k(ƙ)
+MAP y(ƴ)
+MAP B(Ɓ)
+MAP D(Ɗ)
+MAP K(Ƙ)
+MAP Y(Ƴ)
+
+# ICONV normalises legitimate non-NFC input onto the NFC forms held
+# in the .dic: separately typed dot below, the vertical-line-below
+# publishing convention, and tone typed before the dot.
+ICONV 5
+ICONV ’ ʼ
+ICONV ' ʼ
+ICONV b̓ ɓ
+ICONV d̓ ɗ
+ICONV k̓ ƙ
+
+# Deliberately NO IGNORE directive: making tone and dot marks
+# ignorable would accept undiacriticised text as correct, which is
+# the exact failure this dictionary exists to prevent.
+
+# No PFX/SFX yet -- add them with a morphologically analysed wordlist.

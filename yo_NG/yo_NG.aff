@@ -1,0 +1,53 @@
+# Yoruba (yo-NG) -- hunspell affix file
+# Windows LCID 1130.
+# Character inventory from An Crubadan project metadata (CC BY 4.0).
+# 25-letter alphabet; no C Q V X Z.
+# Mid tone is unmarked, so an unmarked word is not by itself an error.
+LANG yo_NG
+SET UTF-8
+TRY aeiounbdgklmoprstwyhjfẹọṣáàéèíìóòúù́̀
+
+# Combining tone/dot marks must be word characters or hunspell
+# splits words on them and never sees a whole token.
+WORDCHARS ẹọṣẸỌṢáàéèíìóòúùÁÀÉÈÍÌÓÒÚÙ́̀'’-
+
+# MAP relates a plain letter to its marked forms. This is what makes
+# an undiacriticised input get the correct suggestion while still
+# being rejected as wrong.
+MAP 12
+MAP aáà
+MAP eéè(ẹ)(ẹ́)(ẹ̀)
+MAP iíì
+MAP oóò(ọ)(ọ́)(ọ̀)
+MAP uúù
+MAP s(ṣ)
+MAP AÁÀ
+MAP EÉÈ(Ẹ)(Ẹ́)(Ẹ̀)
+MAP IÍÌ
+MAP OÓÒ(Ọ)(Ọ́)(Ọ̀)
+MAP UÚÙ
+MAP S(Ṣ)
+
+# ICONV normalises legitimate non-NFC input onto the NFC forms held
+# in the .dic: separately typed dot below, the vertical-line-below
+# publishing convention, and tone typed before the dot.
+ICONV 13
+ICONV ẹ ẹ
+ICONV ọ ọ
+ICONV ṣ ṣ
+ICONV Ẹ Ẹ
+ICONV Ọ Ọ
+ICONV Ṣ Ṣ
+ICONV e̩ ẹ
+ICONV o̩ ọ
+ICONV s̩ ṣ
+ICONV ẹ́ ẹ́
+ICONV ẹ̀ ẹ̀
+ICONV ọ́ ọ́
+ICONV ọ̀ ọ̀
+
+# Deliberately NO IGNORE directive: making tone and dot marks
+# ignorable would accept undiacriticised text as correct, which is
+# the exact failure this dictionary exists to prevent.
+
+# No PFX/SFX yet -- add them with a morphologically analysed wordlist.
