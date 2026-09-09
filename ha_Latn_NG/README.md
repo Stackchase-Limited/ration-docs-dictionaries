@@ -21,6 +21,30 @@ Windows LCID **1128**. Boko (Latin) orthography, Nigeria.
 because the hooked letter is not on the keyboard — so `kasa` is rejected but
 suggests `ƙasa`.
 
-## Wordlist
+## Wordlist (superseded -- see provenance below)
 
 `ha_Latn_NG.dic` is not yet present — see `tools/build_dic.py`.
+
+## Wordlist provenance
+
+78,696 entries, built by `tools/build_dic.py` from:
+
+* **Hausa Wikipedia** (CC BY-SA 4.0) -- 123,004 pages, 60.0M tokens.
+
+No curated Hausa lexicon was found in open form; An Crubadan holds one
+(speller status "yes", derived from Bargery) but crubadan.org is offline.
+
+**Licence: CC BY-SA 4.0.**
+
+### Known limitation -- READ BEFORE SHIPPING
+
+Hausa Wikipedia is heavily contaminated with unhooked spellings: writers
+without a Hausa keyboard type `kasa` for `ƙasa`, `daya` for `ɗaya`. 2,199
+hooked words had their unhooked spelling attested too, most at over 83% of the
+correct form's frequency -- so frequency alone cannot separate them.
+
+`--dominance 1.2` drops the clearest cases (`wadanda`, `kasar`), but this is a
+blunt instrument: it cannot distinguish a keyboard shortcut from a genuine
+minimal pair. `kasa` ("to fail") and `ƙasa` ("land") are different words, and
+the guard may have removed one. **A Hausa speaker must review this list before
+it ships.** Of the three languages here, Hausa has the weakest source.

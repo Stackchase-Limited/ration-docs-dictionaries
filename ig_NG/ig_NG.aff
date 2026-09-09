@@ -6,11 +6,11 @@
 # The apostrophe is orthographic (n'ime, n'ihi) and is a word character.
 LANG ig_NG
 SET UTF-8
-TRY aeiounbcdfghjklmprstwyzịọụṅñ́̀̄
+TRY aeiounbcdfghjklmprstwyzịọụṅñ́̀̄ńǹḿ
 
 # Combining tone/dot marks must be word characters or hunspell
 # splits words on them and never sees a whole token.
-WORDCHARS ịọụỊỌỤṅṄñÑ́̀̄'’-
+WORDCHARS ịọụỊỌỤṅṄñÑ́̀̄'’-ńŃǹǸḿḾ
 
 # MAP relates a plain letter to its marked forms. This is what makes
 # an undiacriticised input get the correct suggestion while still

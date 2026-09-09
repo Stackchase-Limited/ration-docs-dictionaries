@@ -26,7 +26,23 @@ Windows LCID **1130**. Latin script, 25 letters, Nigeria.
   marks ignorable would make the checker accept undiacriticised text as
   correct, which is the failure mode this dictionary exists to prevent.
 
-## Wordlist
+## Wordlist (superseded -- see provenance below)
 
 `yo_NG.dic` is not yet present — see `tools/build_dic.py` and the source
 decision recorded on the `ration/9.4-languages` branch.
+
+## Wordlist provenance
+
+66,180 entries, built by `tools/build_dic.py` from two complementary sources:
+
+* **Niger-Volta-LTI/yoruba-text** (GPL-3.0) -- 69,455 files, 14.3M tokens:
+  Bibeli Mimo, JW300, Quran Mimo, Iroyin, Owe, TheYorubaBlog, UDHR and
+  YorubaForAcademicPurpose. Professionally translated, properly diacriticised.
+* **Lesika/yoruba_words_sorted.txt** -- a curated 41,584-word list from the
+  same repository; 83% of entries carry diacritics.
+
+Excluded deliberately: `LagosNWU/all_transcripts_no_diacritics.txt` (would
+teach undiacriticised spellings), `jw300.en.txt` (English side of the parallel
+corpus) and `Asubiaro_LangID` (deliberately mixed-language training data).
+
+**Licence: GPL-3.0**, inherited from yoruba-text. Compatible with AGPL-3.0.

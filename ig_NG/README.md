@@ -21,6 +21,23 @@ vertical-line-below convention (U+0329) and tone-before-dot orderings onto NFC.
 No `IGNORE`: dropping the subdot would collapse distinct words and accept
 misspellings.
 
-## Wordlist
+## Wordlist (superseded -- see provenance below)
 
 `ig_NG.dic` is not yet present — see `tools/build_dic.py`.
+
+## Wordlist provenance
+
+49,339 entries, built by `tools/build_dic.py` from:
+
+* **nkowaokwu/igbo_api** (Apache-2.0) -- curated Igbo-English lexicon,
+  5,624 headwords including variations. Treated as always-keep.
+* **Igbo Wikipedia** (CC BY-SA 4.0) -- 64,136 pages, 27.2M tokens, filtered
+  for markup debris and English bleed.
+
+**Licence: CC BY-SA 4.0 / Apache-2.0.** Attribution to both required.
+
+### Known limitation
+
+The English-word filter uses `/usr/share/dict/words` and so drops Igbo words
+that collide with English strings. `aha` ("name") is a known casualty. Native
+review should restore such entries.
