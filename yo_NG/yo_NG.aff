@@ -28,23 +28,72 @@ MAP OÓÒ(Ọ)(Ọ́)(Ọ̀)
 MAP UÚÙ
 MAP S(Ṣ)
 
-# ICONV normalises legitimate non-NFC input onto the NFC forms held
-# in the .dic: separately typed dot below, the vertical-line-below
-# publishing convention, and tone typed before the dot.
-ICONV 13
-ICONV ẹ ẹ
-ICONV ọ ọ
-ICONV ṣ ṣ
+# ICONV normalises input onto the exact forms held in the .dic.
+# Generated from the wordlist: every letter-plus-mark cluster the
+# dictionary contains gets a rule from its decomposed spelling, so a
+# word typed with combining marks matches the precomposed entry. The
+# vertical-line-below rules are a publishing convention, not a Unicode
+# decomposition, so they are listed explicitly.
+ICONV 59
+ICONV À À
+ICONV Á Á
+ICONV È È
+ICONV É É
 ICONV Ẹ Ẹ
+ICONV Ẹ̀ Ẹ̀
+ICONV Ẹ́ Ẹ́
+ICONV E̩ Ẹ
+ICONV Ì Ì
+ICONV Ì̀ Ì̀
+ICONV Í Í
+ICONV Ǹ Ǹ
+ICONV Ń Ń
+ICONV Ò Ò
+ICONV Ó Ó
 ICONV Ọ Ọ
+ICONV Ọ̀ Ọ̀
+ICONV Ọ́ Ọ́
+ICONV O̩ Ọ
 ICONV Ṣ Ṣ
+ICONV S̩ Ṣ
+ICONV Ù Ù
+ICONV Ú Ú
+ICONV à à
+ICONV à̀ à̀
+ICONV á á
+ICONV á̀ á̀
+ICONV á́ á́
+ICONV è è
+ICONV è̀ è̀
+ICONV é é
+ICONV é́ é́
+ICONV ẹ ẹ
+ICONV ẹ̀ ẹ̀
+ICONV ẹ́ ẹ́
 ICONV e̩ ẹ
+ICONV ì ì
+ICONV í í
+ICONV ḿ ḿ
+ICONV ǹ ǹ
+ICONV ń ń
+ICONV ò ò
+ICONV ò̀ ò̀
+ICONV ó ó
+ICONV ó̀ ó̀
+ICONV ó́ ó́
+ICONV ó́́ ó́́
+ICONV ọ ọ
+ICONV ọ̀ ọ̀
+ICONV ọ́ ọ́
 ICONV o̩ ọ
+ICONV ṣ ṣ
+ICONV ṣ̀ ṣ̀
+ICONV ṣ́ ṣ́
 ICONV s̩ ṣ
-ICONV ẹ́ ẹ́
-ICONV ẹ̀ ẹ̀
-ICONV ọ́ ọ́
-ICONV ọ̀ ọ̀
+ICONV ù ù
+ICONV ù̀ ù̀
+ICONV ú ú
+ICONV ú́ ú́
 
 # Deliberately NO IGNORE directive: making tone and dot marks
 # ignorable would accept undiacriticised text as correct, which is

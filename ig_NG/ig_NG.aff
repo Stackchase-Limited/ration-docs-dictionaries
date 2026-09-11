@@ -29,24 +29,41 @@ MAP N(Ṅ)(Ñ)
 MAP AÁÀ
 MAP EÉÈ
 
-# ICONV normalises legitimate non-NFC input onto the NFC forms held
-# in the .dic: separately typed dot below, the vertical-line-below
-# publishing convention, and tone typed before the dot.
-ICONV 14
-ICONV ị ị
-ICONV ọ ọ
-ICONV ụ ụ
+# ICONV normalises input onto the exact forms held in the .dic.
+# Generated from the wordlist: every letter-plus-mark cluster the
+# dictionary contains gets a rule from its decomposed spelling, so a
+# word typed with combining marks matches the precomposed entry. The
+# vertical-line-below rules are a publishing convention, not a Unicode
+# decomposition, so they are listed explicitly.
+ICONV 28
 ICONV Ị Ị
-ICONV Ọ Ọ
-ICONV Ụ Ụ
-ICONV ṅ ṅ
+ICONV Ị̀ Ị̀
+ICONV I̩ Ị
+ICONV Ǹ Ǹ
+ICONV Ñ Ñ
 ICONV Ṅ Ṅ
+ICONV Ọ Ọ
+ICONV Ọ̀ Ọ̀
+ICONV Ọ́ Ọ́
+ICONV O̩ Ọ
+ICONV Ụ Ụ
+ICONV U̩ Ụ
+ICONV ị ị
+ICONV ị̀ ị̀
+ICONV ị́ ị́
 ICONV i̩ ị
+ICONV ǹ ǹ
+ICONV ń ń
+ICONV ñ ñ
+ICONV ṅ ṅ
+ICONV ọ ọ
+ICONV ọ̀ ọ̀
+ICONV ọ́ ọ́
 ICONV o̩ ọ
+ICONV ụ ụ
+ICONV ụ̀ ụ̀
+ICONV ụ́ ụ́
 ICONV u̩ ụ
-ICONV ị́ ị́
-ICONV ọ́ ọ́
-ICONV ụ́ ụ́
 
 # Deliberately NO IGNORE directive: making tone and dot marks
 # ignorable would accept undiacriticised text as correct, which is
