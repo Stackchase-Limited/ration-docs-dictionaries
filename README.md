@@ -1,19 +1,33 @@
-## Dictionaries
-The dictionaries of various languages used for spellchecking and hyphenation in [ONLYOFFICE Document Server][2] and [ONLYOFFICE Desktop Editors][4].
+# Ration Docs - dictionaries
 
-## Project Information
+Spellcheck dictionaries, one directory per language.
 
-Official website: [http://www.onlyoffice.com](http://onlyoffice.com "http://www.onlyoffice.com")
+Part of **[Ration Docs Desktop](https://github.com/Stackchase-Limited/ration-docs-desktop)**, an offline office suite maintained by Stackchase Limited. This repository is a modified version of [ONLYOFFICE/dictionaries](https://github.com/ONLYOFFICE/dictionaries), originally developed by Ascensio System SIA, forked at release 9.4.0.
 
-Code repository: [https://github.com/ONLYOFFICE/dictionaries](https://github.com/ONLYOFFICE/dictionaries "https://github.com/ONLYOFFICE/dictionaries")
+## Building
 
-SaaS version: [https://www.onlyoffice.com/cloud-office.aspx](https://www.onlyoffice.com/cloud-office.aspx "https://www.onlyoffice.com/cloud-office.aspx")
+This repository is not built on its own. It is one submodule of the suite, and
+`build_tools` drives the whole build:
 
-## User Feedback and Support
+    git clone --recursive https://github.com/Stackchase-Limited/ration-docs-desktop.git
+    cd ration-docs-desktop/build_tools
+    python3 configure.py --module desktop --platform linux_arm64 --qt-dir /usr
+    python3 make.py
 
-If you have any problems with or questions about [ONLYOFFICE Document Server][2], please visit our official forum to find answers to your questions: [forum.onlyoffice.com][1] or you can ask and answer ONLYOFFICE development questions on [Stack Overflow][3].
+## Licence and attribution
 
-  [1]: https://forum.onlyoffice.com
-  [2]: https://github.com/ONLYOFFICE/DocumentServer
-  [3]: http://stackoverflow.com/questions/tagged/onlyoffice
-  [4]: https://github.com/ONLYOFFICE/DesktopEditors
+Distributed under the **GNU Affero General Public License v3** together with the
+additional terms supplied with the original program; both are in `LICENSE`.
+Non-code elements - illustrations, icon sets, documentation - are **CC BY-SA 4.0**.
+
+    Copyright (C) Ascensio System SIA, 2009-2026
+    Copyright (C) Stackchase Limited, 2026
+
+This is a modified version of ONLYOFFICE software. The original was developed by
+Ascensio System SIA; modifications are by Stackchase Limited, 2026. **ONLYOFFICE is
+a trademark of Ascensio System SIA**, used here only to identify the software this
+is based on. Ration Docs is not produced by, endorsed by, or affiliated with
+Ascensio System SIA, and no trademark rights are granted by the licence.
+
+The corresponding source for a released binary is the superproject at the matching
+tag, with this repository at the commit that tag records.
